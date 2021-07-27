@@ -52,7 +52,7 @@ void print_IP4(const u_char* packet) {
     // 0b 0a 0a 0a  -------------> 0a 0a 0a 0b
     // 24 16  8  0
     //
-    // 0b 0a 0a 0a >> 24 --------> 0b 0b 0b 0b & 0xff -------> 00 00 00 0b
+    // (0b 0a 0a 0a >> 24) & 0xff -------> 00 00 00 0b
     //
     // struct in_addr { uint32_t s_addr } so, we can use uint32_t ntohl
 
